@@ -21,7 +21,7 @@ export default function searchWeather() {
           <div className="col-4">
             <h1>Vienna</h1>
             <p className="date description">
-              Thursday, 13 October 2022 partly cloudy
+              Thursday, 10 November 2022 partly cloudy
             </p>
           </div>
           <div className="col-4">
