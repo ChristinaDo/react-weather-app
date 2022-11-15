@@ -1,0 +1,63 @@
+.Weather {
+  text-align: center;
+  padding: 16px;
+  border-radius: 10px;
+  background: radial-gradient(
+    465px at -15.1% -25%,
+    rgb(17, 130, 193) 0%,
+    rgb(67, 166, 238) 49%,
+    rgb(126, 203, 244) 90.2%
+  );
+  color: white;
+}
+
+.Weather .searchField {
+  background: rgba(255, 255, 255, 0.5);
+  border: rgba(255, 255, 255, 0.5);
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+
+.Weather input::placeholder {
+  color: white;
+}
+
+.Weather .searchButton {
+  background: rgba(255, 255, 255, 0.5);
+  border: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  margin-left: 10px;
+}
+
+.Weather h1 {
+  font-size: 32px;
+  font-weight: 100;
+  margin: 20px 0 0 0;
+}
+.Weather h2 {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 100;
+  margin: 0 0 15px 0;
+}
+
+.Weather p {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0 0 15px 0;
+}
+
+.Weather ul {
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+.Weather li {
+  font-size: 13px;
+  list-style: none;
+}
