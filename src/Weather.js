@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import Forecast from "./Forecast";
 
 export default function Weather(props) {
@@ -10,7 +11,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.city,
-      date: "Wednesday, 20:25",
+      date: new Date(response.data.time * 1000),
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
@@ -31,7 +32,9 @@ export default function Weather(props) {
           <input className="searchButton" type="submit" value="Search" />
         </form>
         <h1>{weatherData.city}</h1>
-        <p>{weatherData.date}</p>
+        <p>
+          <FormattedDate date={weatherData.date} />
+        </p>
         <h2>{Math.round(weatherData.temperature)}°C</h2>
         <ul>
           <li className="text-capitalize">{weatherData.description}</li>
