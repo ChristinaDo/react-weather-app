@@ -61,3 +61,7 @@
   font-size: 13px;
   list-style: none;
 }
+.weatherIcon {
+  width: 10px;
+  color: white;
+}
