@@ -2,32 +2,31 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import images from "./images";
 import "./Weather.css";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <h1>{props.data.city}</h1>
-      <p>
-        <FormattedDate date={props.data.date} />
-      </p>
-      <h2>{Math.round(props.data.temperature)}°C</h2>
-
-      <ul>
-        <li className="text-capitalize">
-          <img className="weatherIcon" src={images.brokenCloudsDay} alt="" />{" "}
-          {props.data.description}
-        </li>
-        <li>
-          <img className="weatherIcon" src={images.humidity} alt="" />{" "}
-          {props.data.humidity}%
-        </li>
-        <li>
-          <img className="weatherIcon" src={images.windVane} alt="" />{" "}
+      <WeatherIcon code={props.data.icon} alt={props.data.description} />
+      <div className="WeatherData">
+        <h1 className="text-uppercase">{props.data.city}</h1>
+        <p>
+          <FormattedDate date={props.data.date} />
+        </p>
+        <WeatherTemperature celsius={props.data.temperature} />
+        <p>
+          <span className="text-capitalize">{props.data.description}</span> |{" "}
+          <img className="humidity" src={images.humidity} alt="" />{" "}
+          {props.data.humidity}% |{" "}
+          <img className="windspeed" src={images.windVane} alt="" />{" "}
           {Math.round(props.data.wind)} km/h
-        </li>
-      </ul>
-      <Forecast />
+        </p>
+      </div>
+      <div className="Forecast">
+        <Forecast />
+      </div>
     </div>
   );
 }
