@@ -1,12 +1,15 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import images from "./images";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
+  const images = {
+    humidity: require("./images/humidity.png"),
+    windVane: require("./images/wind-vane.png"),
+  };
   return (
     <div className="WeatherInfo">
       <WeatherIcon code={props.data.icon} alt={props.data.description} />
