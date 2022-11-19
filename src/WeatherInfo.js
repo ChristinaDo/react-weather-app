@@ -3,7 +3,6 @@ import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
-import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   const images = {
@@ -12,23 +11,24 @@ export default function WeatherInfo(props) {
   };
   return (
     <div className="WeatherInfo">
-      <WeatherIcon code={props.data.icon} alt={props.data.description} />
+      <WeatherIcon
+        code={props.data.icon}
+        alt={props.data.description}
+        size={90}
+      />
       <div className="WeatherData">
         <h1 className="text-uppercase">{props.data.city}</h1>
-        <p>
+        <p className="date">
           <FormattedDate date={props.data.date} />
         </p>
         <WeatherTemperature celsius={props.data.temperature} />
-        <p>
+        <p className="WeatherDescription">
           <span className="text-capitalize">{props.data.description}</span> |{" "}
           <img className="humidity" src={images.humidity} alt="" />{" "}
           {props.data.humidity}% |{" "}
           <img className="windspeed" src={images.windVane} alt="" />{" "}
           {Math.round(props.data.wind)} km/h
         </p>
-      </div>
-      <div className="Forecast">
-        <Forecast />
       </div>
     </div>
   );

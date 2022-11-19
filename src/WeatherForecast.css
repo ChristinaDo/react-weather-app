@@ -1,0 +1,18 @@
+WeatherForecast {
+  text-align: center;
+}
+.row {
+  --bs-gutter-x: 0;
+}
+.WeatherForecast-min {
+  opacity: 0.8;
+  margin-left: 5px;
+}
+.WeatherForecast-max {
+  font-weight: 500;
+}
+.WeatherForecastDay {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 13px 0;
+}

@@ -20,7 +20,7 @@
   border-radius: 5px;
   font-size: 14px;
   line-height: 22px;
-  margin-top: 10px;
+  margin: 10px 0 10px 0;
 }
 
 .Weather input::placeholder {
@@ -40,7 +40,7 @@
 .Weather h1 {
   font-size: 32px;
   font-weight: 400;
-  margin: 0 0 3px 0;
+  margin: 5px 0 3px 0;
   color: #d6c9df;
 }
 .Weather h2 {
@@ -52,6 +52,7 @@
 }
 .Weather .unit {
   font-size: 16px;
+  font-weight: 400;
   position: relative;
   top: -20px;
   line-height: 1;
@@ -61,10 +62,16 @@
   color: #d6c9df;
   text-decoration: none;
 }
-.Weather p {
+.Weather .date {
   font-size: 12px;
   line-height: 14px;
   margin-bottom: 2px;
+}
+
+.Weather .WeatherDescription {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 10px;
 }
 
 .Weather ul {
@@ -76,9 +83,8 @@
   list-style: none;
 }
 .weatherIcon {
-  width: 100px;
   color: white;
-  margin: 20px 0 30px 0;
+  margin: 7px;
 }
 
 .humidity,
@@ -90,9 +96,6 @@
 .WeatherData {
   background: white;
   color: #9f9f9f;
-  margin: -16px;
+  margin: 10px -16px;
   padding: 2px 0;
-}
-.Forecast {
-  margin-top: 30px;
 }
